@@ -5,7 +5,7 @@ import random
 from time import sleep
 import serial
 
-ser = serial.Serial('/dev/ttyACM0', baudrate=9600)
+ser = serial.Serial('COM4', baudrate=9600, timeout = 5)
 
 # Create figure for plotting
 fig = plt.figure()
@@ -15,6 +15,7 @@ ys = []
 
 sleep(2)
 
+x_value = 0
 # This function is called periodically from FuncAnimation
 def animate(i, xs, ys):
     # fetching data from sensor via arduino via serial/usb
@@ -25,8 +26,8 @@ def animate(i, xs, ys):
     ys.append(voltage)
 
     # Limit x and y lists to 20 items
-    xs = xs[-20:]
-    ys = ys[-20:]
+    xs = xs[-10:]
+    ys = ys[-10:]
 
     # Draw x and y lists
     ax.clear()
@@ -39,5 +40,5 @@ def animate(i, xs, ys):
     plt.ylabel('Voltage v')
 
 # Set up plot to call animate() function periodically
-ani = animation.FuncAnimation(fig, animate, fargs=(xs, ys), interval=1)
+ani = animation.FuncAnimation(fig, animate, fargs=(xs, ys), interval=100)
 plt.show()

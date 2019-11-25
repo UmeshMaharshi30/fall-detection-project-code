@@ -1,7 +1,7 @@
 from time import sleep
 import serial
 
-ser = serial.Serial('/dev/ttyACM0', baudrate=9600)
+ser = serial.Serial('COM4', baudrate=9600)
 
 sleep(2)
 

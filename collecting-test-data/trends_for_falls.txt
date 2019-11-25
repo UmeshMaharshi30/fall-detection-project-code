@@ -1,0 +1,16 @@
+fall, 23, 6
+fall, 20, 3
+fall, 26, 10
+fall, 40, 40
+fall, 28, 0
+fall, 92, 40
+fall, 32, 8
+fall, 62, 28
+fall, 55, 4
+fall, 32, 42
+fall, 41, 44
+fall, 43, 30
+fall, 75, 29
+fall, 22, 16
+fall, 35, 63
+fall, 40, 22
